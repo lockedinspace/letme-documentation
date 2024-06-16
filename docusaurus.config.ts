@@ -4,11 +4,11 @@ import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
   title: 'Letme',
-  tagline: 'Credentials management tool',
+  tagline: 'AWS credentials management tool',
   favicon: 'img/letme.ico',
 
   // Set the production url of your site here
-  url: 'https://letme.lockedinspace.com',
+  url: 'https://lockedinspace.com/letme',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',

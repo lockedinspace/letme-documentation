@@ -1,6 +1,6 @@
 ---
-slug: release/0.2
-title: "Release v0.2: New Horizons"
+slug: release/0.2.0
+title: "Release v0.2.0: New Horizons"
 authors: hruiz
 tags: [release]
 ---
