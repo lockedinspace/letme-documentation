@@ -1,0 +1,9 @@
+{
+    "name": "lockedinspace",
+    "region": [
+     "eu-west-1"
+    ],
+    "role": [
+     "arn:aws:iam::123456789012:role/simple-role"
+    ]
+}

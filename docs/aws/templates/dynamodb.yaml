@@ -1,0 +1,46 @@
+AWSTemplateFormatVersion: "2010-09-09"
+
+Description: Creates a simple DynamoDB Table for Letme.
+
+Parameters:
+  PartitionKeyName: # Do not modify.
+    Description: Name of the partition key
+    Type: String
+    Default: name
+
+  PartitionKeyType: # Do not modify.
+    Description: Type of the partition Key
+    Type: String
+    AllowedValues:
+      - S
+    Default: S
+
+  ReadCapacityUnits:
+    Description: Number of DynamoDB Read Capacity Units
+    Type: Number
+    Default: 1
+
+  TableName:
+    Description: DynamoDB table name.
+    Type: String
+    Default: cross-account-credentials
+
+  WriteCapacityUnits:
+    Description: Number of DynamoDB Write Capacity Units
+    Type: Number
+    Default: 1
+
+Resources:
+  DynamoDbTable:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      AttributeDefinitions:
+        - AttributeName: !Ref PartitionKeyName
+          AttributeType: !Ref PartitionKeyType
+      ProvisionedThroughput:
+        ReadCapacityUnits: !Ref ReadCapacityUnits
+        WriteCapacityUnits: !Ref WriteCapacityUnits
+      KeySchema:
+        - AttributeName: !Ref PartitionKeyName
+          KeyType: HASH
+      TableName: !Ref TableName

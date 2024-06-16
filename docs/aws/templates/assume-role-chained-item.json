@@ -1,0 +1,11 @@
+{
+    "name": "lockedinspace_chained",
+    "region": [
+     "eu-west-1"
+    ],
+    "role": [
+     "arn:aws:iam::123456789012:role/simple-role",
+     "arn:aws:iam::098765432112:role/simple-role-second-account",
+     "arn:aws:iam::456789987652:role/simple-role-third-account"
+    ]
+}
