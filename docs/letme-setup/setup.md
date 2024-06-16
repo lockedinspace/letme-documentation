@@ -39,7 +39,7 @@ Here's a list of all configurable fields on `.letme/letme-config`
 | ----------------------------- | ----------- | ------------- | -------- | ---- |
 | ``aws_source_profile``        | The AWS CLI profile name which maps to the source account. This profile must held the DynamoDB table. [[1]](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_principal.html) | ``default`` | No | ``string`` |
 | ``aws_source_profile_region`` | The region name in the source account where the DynamoDB table is located [[2]](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html) | ``-`` | Yes | ``string`` |
-| ``dynamodb_table``            | The DynamoDB table name where the AWS accounts are stored [3](#setting-up-the-aws-infrastructure-required-by-letme) | ``-`` | Yes | ``string`` |
+| ``dynamodb_table``            | The DynamoDB table name where the AWS accounts are stored [3](../aws/dynamodb-infrastructure.md) | ``-`` | Yes | ``string`` |
 | ``mfa_arn``                   | Virtual MFA device arn used to authenticate against AWS [[4]](https://docs.aws.amazon.com/cli/latest/reference/iam/list-mfa-devices.html)  | ``-`` | No (depending on your AWS trust relationship policy) | ``string`` |
 | ``session_name``              | The session name when performing assumeRole requests [[5]](https://awscli.amazonaws.com/v2/documentation/api/2.0.33/reference/sts/assume-role.html#options)| ``${account_name}-letme-session`` | No | ``string`` |
 | ``session_duration``          | Token validity in seconds [[6]](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use.html#id_roles_use_view-role-max-session)| ``${account_name}-letme-session`` | No | ``string`` |

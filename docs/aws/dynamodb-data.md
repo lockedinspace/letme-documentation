@@ -63,7 +63,7 @@ Multi Account role chaining consists of assuming a role through a series of IAM 
 
 
 :::tip
-To **understand multi-account role chaining**, see: [**How it works - Multi-account role chaining**](../how.md#assume-role-chained)
+To **understand multi-account role chaining**, see: [**How it works - Multi-account role chaining**](../how.md#multi-account-assume-role-chaining)
 :::
 
 :::tip
