@@ -79,7 +79,7 @@ mfa_arn                   = arn:aws:iam::4002019901:mfa/sample-na-user
 session_name              = sample-na-user
 session_duration          = 900
 ```
-> Get yout mfa_arn with``aws iam list-mfa-devices --query 'MFADevices[].SerialNumber'``
+> Get yout mfa_arn with ``aws iam list-mfa-devices --query 'MFADevices[].SerialNumber'``
 
 Now you will be able to list the accounts under your organization:
 ```bash
@@ -104,7 +104,7 @@ letme: use the argument '--profile pro-landing-zone-ap' to interact with the acc
 Now you can perform AWS cli operations against that account:
 
 ```bash
-$ aws s3 ls --profile toro
+$ aws s3 ls --profile pro-landing-zone-ap
 2024-11-17 19:29:09 xxx-user-emails
 2021-03-15 09:58:27 cf-templates-21581238ujt23
 2019-06-07 15:53:14 elasticbeanstalk-eu-central-1-3582131231
