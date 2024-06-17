@@ -1,6 +1,6 @@
 ---
-sidebar_position: 1
-slug: dynamodb/infrastructure
+sidebar_position: 4
+slug: installation
 ---
 
 # DynamoDB - Infrastructure

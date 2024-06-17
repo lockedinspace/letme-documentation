@@ -3,15 +3,15 @@ import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
-  title: 'Letme',
+  title: 'letme',
   tagline: 'AWS credentials management tool',
   favicon: 'img/letme.ico',
 
   // Set the production url of your site here
-  url: 'https://lockedinspace.com/letme',
+  url: 'https://lockedinspace.com',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/',
+  baseUrl: '/letme',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
@@ -39,7 +39,7 @@ const config: Config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/lockedinspace/letme-website/docs/',
+            'https://github.com/lockedinspace/letme-documentation/tree/main/',
         },
         blog: {
           showReadingTime: true,
@@ -59,7 +59,7 @@ const config: Config = {
     // Replace with your project's social card
     image: 'img/letme.svg',
     navbar: {
-      title: 'Letme',
+      title: 'letme',
       logo: {
         alt: 'My Site Logo',
         src: 'img/letme.svg',

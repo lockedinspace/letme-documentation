@@ -1,9 +1,0 @@
-{
-  "label": "AWS - Setup",
-  "position": 3,
-  "link": {
-    "type": "generated-index",
-    "description": "Basic AWS account example setup.",
-    "slug": "aws"
-  }
-}
