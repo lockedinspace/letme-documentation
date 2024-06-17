@@ -66,6 +66,11 @@ const config: Config = {
       },
       items: [
         {
+          href: 'https://lockedinspace.com',
+          label: 'lockedinspace.com blog',
+          position: 'right',
+        },
+        {
           type: 'docSidebar',
           sidebarId: 'tutorialSidebar',
           position: 'left',
