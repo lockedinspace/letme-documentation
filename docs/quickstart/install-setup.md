@@ -101,7 +101,7 @@ Enter MFA one time pass code: 189575
 letme: use the argument '--profile pro-landing-zone-ap' to interact with the account.
 ```
 
-Now you can perform AWS cli operations against that account:
+And perform AWS cli operations against that account:
 
 ```bash
 $ aws s3 ls --profile pro-landing-zone-ap
