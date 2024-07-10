@@ -1,5 +1,5 @@
 ---
-sidebar_position: 5
+sidebar_position: 2
 slug: dynamodb/data
 ---
 
@@ -35,7 +35,7 @@ This JSON allows us to obtain `assume-role-account` credentials using `simple-ro
 ```
 
 :::tip
-To **understand Assume Role**, see: [**How it works - Assume Role**](../how.md#assume-role)
+To **understand Assume Role**, see: [**How it works - Assume Role**](../technical-guide/how.md#assume-role)
 :::
 
 :::tip
@@ -63,7 +63,7 @@ Multi Account role chaining consists of assuming a role through a series of IAM 
 
 
 :::tip
-To **understand multi-account role chaining**, see: [**How it works - Multi-account role chaining**](../how.md#multi-account-assume-role-chaining)
+To **understand multi-account role chaining**, see: [**How it works - Multi-account role chaining**](../technical-guide/how.md#multi-account-assume-role-chaining)
 :::
 
 :::tip

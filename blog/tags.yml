@@ -2,3 +2,8 @@ release:
   label: Release
   permalink: /release
   description: Letme versions updates
+
+guide:
+  label: Guide
+  permalink: /guide
+  description: List of posts related to the explanation of major changes, migration guides or specific implementations.

@@ -6,18 +6,40 @@ sidebar_position: 2
 
 Lets you interact with contexts defined in `.letme/letme-config`.
 
-![](./img/letme-config-context.gif)
-
 ## Commands
 
 - List contexts:
 
 ```bash
-letme config
+letme config get-contexts
 ```
 
-- Change context:
+- Create a new context:
 
 ```bash
-letme config --context ${CONTEXT_NAME}
+letme config new-context
+```
+
+- Change your active context:
+
+```bash
+letme config switch-context ${contextName}
+```
+
+- Update an existing context:
+
+```bash
+letme config update-context
+```
+
+- Verify `~/letme/.letme-config` is valid:
+
+```bash
+letme config validate
+```
+
+- Output a context config example:
+
+```bash
+letme config view-template
 ```

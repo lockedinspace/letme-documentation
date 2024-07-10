@@ -1,5 +1,6 @@
 ---
 sidebar_position: 3
+slug: iam
 ---
 
 # IAM
@@ -29,6 +30,7 @@ On AWS, IAM **Users don't have permissions** to do anything by default. Therefor
             "Action": [
                 "dynamodb:GetItem", 
                 "dynamodb:Scan"
+                "dynamodb:ListTables"
             ],
             "Resource": "arn:aws:dynamodb:${AWS_REGION}:${AWS_ACCOUNT_ID}:table/${TABLE_NAME}"
         }
