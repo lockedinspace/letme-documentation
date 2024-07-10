@@ -17,7 +17,7 @@ tags: [release, guide]
 We've made some changes on the API Calls made to AWS to improve **performance** and **reliability**. So, **you need to update your permissions**.
 
 :::info
-**See**: [IAM Configuration](../quickstart-guide-admin/iam.md)
+**See**: [IAM Configuration](/quickstart-guide-admin/iam)
 :::
 
 ## Letme cache
