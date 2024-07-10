@@ -1,6 +1,6 @@
 {
-  "label": "Letme - Usage",
-  "position": 6,
+  "label": "Commands",
+  "position": 4,
   "link": {
     "type": "generated-index",
     "slug": "letme-usage"
