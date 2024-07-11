@@ -100,5 +100,5 @@ On multi-account assume role chaining things get more complex. Here's a diagram 
 ```
 
 :::tip
-To **understand multi-account role chaining**, see: [**How it works - Multi-account role chaining**](../how#multi-account-assume-role-chaining)
+To **understand multi-account role chaining**, see: [**How it works - Multi-account role chaining**](#multi-account-assume-role-chaining)
 :::
