@@ -1,5 +1,5 @@
 ---
-slug: migration-guide/v0.2
+slug: migration-guide/v0.2.0
 title: "Migration guide: v0.2.0"
 authors: 
   - hruiz
@@ -36,11 +36,11 @@ In order to standarize the process of generating new credentials, we've changed 
 
 ```toml
 [general]
-  aws_source_profile = "onnera"
+  aws_source_profile = "letme"
   aws_source_profile_region = "eu-west-1"
-  dynamodb_table = "onnera_auth_cross-account-credentials-registry"
-  mfa_arn = "arn:aws:iam::876842235607:mfa/MFA-ONNERA"
-  session_name = "crodriguez_seidor"
+  dynamodb_table = "letme-accounts-table"
+  mfa_arn = "arn:aws:iam::1234567890:mfa/my-device"
+  session_name = "user_letme"
 ```
 
 2. Remove all `"` characters and align all text to the left side:
