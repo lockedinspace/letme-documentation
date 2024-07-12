@@ -3,6 +3,9 @@ sidebar_position: 3
 slug: iam
 ---
 
+import useBaseUrl from '@docusaurus/useBaseUrl';
+import ThemedImage from '@theme/ThemedImage';
+
 # IAM
 
 On this section we'll explain how to setup IAM to be able to do simple Assume Role and multi-account assume role chaining. 
@@ -65,7 +68,15 @@ To be able to do simple Assume Roles, IAM Roles must allow sts:AssumeRole on the
 
 On multi-account assume role chaining things get more complex. Here's a diagram to better understand the configuration:
 
-![](/img/assume-role-chained.png)
+<p align="center">
+<ThemedImage
+  alt="Docusaurus themed image"
+  sources={{
+    light: useBaseUrl('/img/assume-role-chained-light.svg'),
+    dark: useBaseUrl('/img/assume-role-chained-dark.svg'),
+  }}
+/>
+</p>
 
 1. First, we need to grant permissions defined above in [Auth Account](./iam.md#auth-account).
 2. Then, we need to allow on the **trust relationship** `sts:AssumeRole` from the ((Nominal User)) (letme) on **Account 1** role (first_role):

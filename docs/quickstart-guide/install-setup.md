@@ -11,7 +11,7 @@ Seamesly switch between AWS accounts.
  - AWS CLI >= 2.x.x
  - Git
 
-## Methods for installing letme
+## Installation Methods
   - [Through go cli (recommended)](#go-cli)
   - [Building from source](#building-from-source)
   
@@ -22,7 +22,9 @@ Install the latest letme version with:
 ```bash
 go install github.com/lockedinspace/letme@latest
 ```
-> [Where does go install the binary?](https://pkg.go.dev/cmd/go#hdr-Compile_and_install_packages_and_dependencies)
+:::info
+[Where does go install the binary?](https://pkg.go.dev/cmd/go#hdr-Compile_and_install_packages_and_dependencies)
+:::
 
 You can also install a specific version swapping ``@latest`` with your desired version.
 
@@ -51,37 +53,55 @@ Move the ``letme`` binary to one of your ``$PATH`` (linux-macos) / ``$env:PATH``
 If your organization has already created the necessary infrastructure for letme, you probably just want to
 connect your letme client to your organization. 
 
-If no organization exists, you must first create the necessary resources.
+If no organization exists, **you must first create the necessary resources**.
 
-- [Connect letme to your organization](#connect-letme-to-your-organization)
-- [Creating your letme organization resources (administrators only)](#wip)
+:::info
+**See**: [Quickstart guide - AWS Administrators](../quickstart-guide-admin/dynamodb-infrastructure.md)
+:::
 
 ### Connect letme to your organization and obtain credentials
 
-Your organization administrator should provide you some values. You will need those values to complement your configuration file. 
-
-Create your configuration file with:
+Your organization administrator should provide you some values. You will need those values to complement your configuration file. To create it run:
 
 ```bash
-$ letme config-file
-letme: edit the config file at $HOME/.letme/letme-config with your values.
+❯ letme config new-context ${contextName}
+```
+Here's an example:
+```bash
+❯ letme config new-context lockedinspace
+letme: creating/updating context 'lockedinspace'. Optional fields can be left empty.
+→ AWS Source Profile Name: letme
+→ AWS Source Profile Region: eu-central-1
+→ AWS DynamoDB Table Name: letme-accounts-table
+→ AWS MFA Device arn (optional): arn:aws:iam::1234567890:mfa/my-device
+→ Token Session Duration in seconds (optional): 
+→ Session Name (optional): user_letme
+Created letme 'lockedinspace' context.
 ```
 
-Open the configuration file with your favourite code editor and fill in the values provided by your administrator.
+Now, if you open `~/.letme/letme-config` file you should see something like this:
 
-Below its a configuration file filled with sample values.
-```
+```ini
 [general]
-aws_source_profile        = default
-aws_source_profile_region = us-east-2
-dynamodb_table            = na-customers
-mfa_arn                   = arn:aws:iam::4002019901:mfa/sample-na-user
-session_name              = sample-na-user
-session_duration          = 900
+aws_source_profile = letme
+aws_source_profile_region = eu-west-1
+dynamodb_table = letme-accounts-table
+mfa_arn = arn:aws:iam::1234567890:mfa/my-device
+session_name = user_letme
 ```
-> Get yout mfa_arn with ``aws iam list-mfa-devices --query 'MFADevices[].SerialNumber'``
+:::tip
+**To get your MFA arn, run**: 
+```bash
+aws iam list-mfa-devices --query 'MFADevices[].SerialNumber'
+```
+:::
 
-Now you will be able to list the accounts under your organization:
+
+## Validate
+
+Now you will be able to:
+
+- List the accounts under your organization:
 ```bash
 $ letme list
 Listing accounts using 'general' context
@@ -92,16 +112,17 @@ eu-client-3              eu-west-3
 pro-landing-zone-ap      ap-south-1
 uat-backups_storage      eu-west-1
 ```
-Obtain any account credentials with:
+
+- Obtain any account credentials with you are able to:
 
 ```bash
 $ letme obtain pro-landing-zone-ap
-Assuming role with the following session name: 'sample-na-user' and context: 'general'
+Assuming role with the following session name: 'user_letme' and context: 'general'
 Enter MFA one time pass code: 189575 
 letme: use the argument '--profile pro-landing-zone-ap' to interact with the account.
 ```
 
-And perform AWS cli operations against that account:
+- And perform AWS cli operations against that account:
 
 ```bash
 $ aws s3 ls --profile pro-landing-zone-ap
