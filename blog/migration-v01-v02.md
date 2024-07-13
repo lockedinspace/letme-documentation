@@ -12,6 +12,14 @@ tags: [release, guide]
 <!--truncate-->
 # Migration Guide
 
+## Go version
+
+We've upgraded all packages to the latest version. Even though Go is retrocompatible, we recommend upgrading to the latest version.
+
+:::info
+**See**: https://go.dev/doc/install
+:::
+
 ## Permissions
 
 We've made some changes on the API Calls made to AWS to improve **performance** and **reliability**. So, **you need to update your permissions**.

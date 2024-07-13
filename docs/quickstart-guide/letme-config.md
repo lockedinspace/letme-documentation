@@ -11,6 +11,7 @@ slug: config-file
 [4]: https://docs.aws.amazon.com/cli/latest/reference/iam/list-mfa-devices.html
 [5]: https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use.html
 [6]: https://awscli.amazonaws.com/v2/documentation/api/2.0.33/reference/sts/assume-role.html#options
+[7]: ../quickstart-guide-admin/dynamodb-data.md
 
 
 Letme holds a configuration file on `~/.letme/letme-config`. It stores details about your AWS configuration.
@@ -48,7 +49,8 @@ Here's the full list of avalaible fields:
 | ``dynamodb_table`` | The DynamoDB table name where the AWS accounts are stored [\[3\]][3] | ``-`` | Yes | ``string`` |
 | ``mfa_arn`` | Virtual MFA device arn used to authenticate against AWS [\[4\]][4]  | ``-`` | No (depending on your AWS trust relationship policy) | ``string`` |
 | ``session_duration`` | Credentials duration time in seconds [\[5\]][5]| `3600` | No | ``number`` |
-| ``session_name`` | The session name when performing assumeRole requests [\[6\]][6]| `${account_name}-letme-session` | No | ``string`` |
+| ``session_name`` | The session name when performing assumeRole requests [\[7\]][7]| `${account_name}-letme-session` | No | ``string`` |
+| ``tags`` | Comma delimited list of values to filter accounts [\[6\]][6]| `-` | No | `[]string` |
 
 
 :::info

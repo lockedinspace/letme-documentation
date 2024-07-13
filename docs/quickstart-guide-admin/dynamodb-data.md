@@ -16,6 +16,11 @@ Every JSON file on a DynamoDB is an Item. Letme needs every item to have at leas
 | `name`        | String           | Alias or common name used to identify an AWS account.       |
 | `region`      | Array of strings | AWS Region code where CLI requests will be made by default. |
 | `role`        | Array of strings | IAM Role/s ARN that will be assumed by `letme`.             |
+| `tags`        | Array of strings | Labels to filter results on list.             |
+
+:::tip
+**See:** [Support for filtering and json output](/blog/release/0.2.1)
+:::
 
 
 ### Assume Role JSON example
