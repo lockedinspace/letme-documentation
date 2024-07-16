@@ -1,9 +1,9 @@
 {
-  "label": "Quickstart guide - AWS Admins",
-  "position": 2,
+  "label": "AWS Admin (setting up initial infrastructure)",
+  "position": 3,
   "link": {
     "type": "generated-index",
     "description": "This quickstart guide aims to provide a streamlined path for creating the required infrastructure and IAM configuration following best practices.",
-    "slug": "letme-setup"
+    "slug": "/guide/admin"
   }
 }

@@ -1,6 +1,6 @@
 ---
 sidebar_position: 1
-slug: dynamodb/infrastructure
+slug: /guide/admin/dynamodb/infrastructure
 ---
 
 # DynamoDB - Infrastructure

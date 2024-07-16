@@ -1,6 +1,6 @@
 ---
 sidebar_position: 1
-slug: install
+slug: /guide/user/install-and-setup
 ---
 # Install and set up letme
 
@@ -20,7 +20,7 @@ Seamesly switch between AWS accounts.
 Install the latest letme version with:
 
 ```bash
-go install github.com/lockedinspace/letme@latest
+❯ go install github.com/lockedinspace/letme@latest
 ```
 :::info
 [Where does go install the binary?](https://pkg.go.dev/cmd/go#hdr-Compile_and_install_packages_and_dependencies)
@@ -28,7 +28,7 @@ go install github.com/lockedinspace/letme@latest
 
 You can also install a specific version swapping ``@latest`` with your desired version.
 
-Available versions can be found as tags in the [letme official repo](https://github.com/lockedinspace/letme). 
+Available versions can be found as releases in the [letme official repo](https://github.com/lockedinspace/letme/releases). 
 
 
 ### Building from source
@@ -36,14 +36,14 @@ Available versions can be found as tags in the [letme official repo](https://git
 Clone the repository
 
 ```bash
-git clone git@github.com:lockedinspace/letme.git
+❯ git clone git@github.com:lockedinspace/letme.git
 ```
 
 Change directory to letme and build the binary:
 
 ```bash
-cd letme/
-go build 
+❯ cd letme/
+❯ go build 
 ```
 
 Move the ``letme`` binary to one of your ``$PATH`` (linux-macos) / ``$env:PATH`` (windows-poweshell) locations.
@@ -53,15 +53,11 @@ Move the ``letme`` binary to one of your ``$PATH`` (linux-macos) / ``$env:PATH``
 If your organization has already created the necessary infrastructure for letme, you probably just want to
 connect your letme client to your organization. 
 
-If no organization exists, **you must first create the necessary resources**.
-
-:::info
-**See**: [Quickstart guide - AWS Administrators](../quickstart-guide-admin/dynamodb-infrastructure.md)
-:::
+If no organization exists, **you must first create the necessary resources**, [take a look at the AWS Admin guide](../admin/).
 
 ### Connect letme to your organization and obtain credentials
 
-Your organization administrator should provide you some values. You will need those values to complement your configuration file. To create it run:
+Your workplace administrator should provide you some values. You will need those values to complement your configuration file. To create it run:
 
 ```bash
 ❯ letme config new-context ${contextName}
@@ -78,33 +74,22 @@ letme: creating/updating context 'lockedinspace'. Optional fields can be left em
 → Session Name (optional): user_letme
 Created letme 'lockedinspace' context.
 ```
-
-Now, if you open `~/.letme/letme-config` file you should see something like this:
-
-```ini
-[general]
-aws_source_profile = letme
-aws_source_profile_region = eu-west-1
-dynamodb_table = letme-accounts-table
-mfa_arn = arn:aws:iam::1234567890:mfa/my-device
-session_name = user_letme
-```
 :::tip
 **To get your MFA arn, run**: 
 ```bash
-aws iam list-mfa-devices --query 'MFADevices[].SerialNumber'
+aws iam list-mfa-devices --query 'MFADevices[].SerialNumber' --profile letme
 ```
 :::
 
 
-## Validate
+## Start using letme
 
 Now you will be able to:
 
 - List the accounts under your organization:
 ```bash
 $ letme list
-Listing accounts using 'general' context
+Listing accounts using 'lockedinspace' context
 NAME:                    MAIN REGION:
 -----                    ------------
 eu-client-1              eu-west-1
@@ -113,16 +98,16 @@ pro-landing-zone-ap      ap-south-1
 uat-backups_storage      eu-west-1
 ```
 
-- Obtain any account credentials with you are able to:
+- Obtain any account credentials:
 
 ```bash
 $ letme obtain pro-landing-zone-ap
-Assuming role with the following session name: 'user_letme' and context: 'general'
+Assuming role with the following session name: 'user_letme' and context: 'lockedinspace'
 Enter MFA one time pass code: 189575 
 letme: use the argument '--profile pro-landing-zone-ap' to interact with the account.
 ```
 
-- And perform AWS cli operations against that account:
+- Use the AWS CLI against the account:
 
 ```bash
 $ aws s3 ls --profile pro-landing-zone-ap

@@ -110,7 +110,7 @@ letme config get-contexts
 
 Here's a real example:
 
-![](../docs/quickstart-guide-admin/img/letme-config-context.gif)
+![](../docs/quickstart-guides/admin-guide/img/letme-config-context.gif)
 
 ## Credentials process
 

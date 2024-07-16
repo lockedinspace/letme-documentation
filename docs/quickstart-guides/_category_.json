@@ -1,0 +1,9 @@
+{
+  "label": "Quickstart guides",
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "description": "Learn about letme from two quickstart guides, one for users who want to connect to an organization and AWS admins which want to set up letme for their workplace.",
+    "slug": "/guides"
+  }
+}

@@ -1,6 +1,6 @@
 ---
 sidebar_position: 3
-slug: iam
+slug: /guide/admin/iam
 ---
 
 import useBaseUrl from '@docusaurus/useBaseUrl';

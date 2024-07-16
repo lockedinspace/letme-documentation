@@ -4,7 +4,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
   title: 'letme',
-  tagline: 'AWS credentials management tool',
+  tagline: 'A reliable, secure and fast way to switch between AWS accounts from the CLI. ',
   favicon: 'img/letme.ico',
 
   // Set the production url of your site here
@@ -61,7 +61,7 @@ const config: Config = {
     navbar: {
       title: 'letme',
       logo: {
-        alt: 'My Site Logo',
+        alt: 'letme logo',
         src: 'img/letme.svg',
       },
       items: [

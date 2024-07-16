@@ -1,6 +1,6 @@
 ---
 sidebar_position: 2
-slug: dynamodb/data
+slug: /guide/admin/dynamodb/data
 ---
 
 # DynamoDB - Data
@@ -40,7 +40,7 @@ This JSON allows us to obtain `assume-role-account` credentials using `simple-ro
 ```
 
 :::tip
-To **understand Assume Role**, see: [**How it works - Assume Role**](../technical-guide/how.md#assume-role)
+To **understand Assume Role**, see: [**How it works - Assume Role**](/technical-guide/how)
 :::
 
 :::tip

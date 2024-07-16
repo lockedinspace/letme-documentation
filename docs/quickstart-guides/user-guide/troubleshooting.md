@@ -1,6 +1,6 @@
 ---
-sidebar_position: 2
-slug: troubleshooting
+sidebar_position: 3
+slug: /guide/user/troubleshooting
 ---
 # Troubleshooting
 
