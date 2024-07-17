@@ -6,9 +6,6 @@ authors:
 tags: [release, guide]
 ---
 
-
-![](/img/letme-banner.webp)
-
 <!--truncate-->
 # Migration Guide
 
@@ -25,7 +22,7 @@ We've upgraded all packages to the latest version. Even though Go is retrocompat
 We've made some changes on the API Calls made to AWS to improve **performance** and **reliability**. So, **you need to update your permissions**.
 
 :::info
-**See**: [IAM Configuration](/quickstart-guide-admin/iam)
+**See**: [IAM Configuration](/guide/admin/iam)
 :::
 
 ## Letme cache

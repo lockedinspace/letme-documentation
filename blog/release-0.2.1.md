@@ -10,8 +10,6 @@ tags: [release]
 
 Here we're with a new version that comes new features for list command!
 
-![](/img/letme-banner.webp)
-
 <!--truncate-->
 
 ## Support for JSON output

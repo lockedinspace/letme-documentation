@@ -11,8 +11,6 @@ tags: [release]
 
 Here we're with a new version that comes new features and base code improvement.
 
-![](/img/letme-banner.webp)
-
 <!--truncate-->
 
 # New Features
