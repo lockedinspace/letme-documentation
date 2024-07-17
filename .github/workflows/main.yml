@@ -1,0 +1,32 @@
+name: Terraform - Develop
+
+on:
+  push:
+    branches:
+      - main
+
+env:
+  AWS_ACCOUNT_ID: _
+  AWS_REGION: eu-west-1
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+permissions:
+  id-token: write
+  contents: read
+  pull-requests: write
+
+
+jobs:
+  deploy:
+    # if: ${{ github.event_name == 'merge'}}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clone the repository
+        uses: actions/checkout@v3
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-region: ${{ env.AWS_REGION }}
+          role-to-assume: arn:aws:iam::${{ env.AWS_ACCOUNT_ID }}:role/github@letme-documentation
+          role-session-name: GitHub_to_AWS_via_FederatedOIDC
+          
