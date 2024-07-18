@@ -38,4 +38,4 @@ jobs:
       - name: Get distributionId
         run: echo "distributionId=$(aws cloudfront list-distributions | jq -r '.DistributionList.Items[] | select(.Aliases.Items[] == "getletme.com") | .Id')" >> $GITHUB_ENV
       - name: Invalidate cache
-        run: aws cloudfront create-invalidation --distribution-id $distributionId --path "/*"
+        run: aws cloudfront create-invalidation --distribution-id $distributionId --path "/*" > /dev/null 2>&1
