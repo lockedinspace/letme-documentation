@@ -5,7 +5,6 @@ on:
       - main
 
 env:
-  AWS_ACCOUNT_ID: _
   AWS_REGION: eu-west-1
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
@@ -26,6 +25,6 @@ jobs:
         uses: aws-actions/configure-aws-credentials@v4
         with:
           aws-region: ${{ env.AWS_REGION }}
-          role-to-assume: arn:aws:iam::${{ env.AWS_ACCOUNT_ID }}:role/github@letme-documentation
+          role-to-assume: arn:aws:iam::${{ secrets.A5T_ID }}:role/github@letme-documentation
           role-session-name: GitHub_to_AWS_via_FederatedOIDC
           
