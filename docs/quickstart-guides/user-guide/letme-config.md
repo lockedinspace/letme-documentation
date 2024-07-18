@@ -7,15 +7,6 @@ slug: /guide/user/config-file
 
 Configure your letme experience.
 
-[1]: https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_principal.html
-[2]: https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html
-[3]: ../quickstart-guide-admin/dynamodb-infrastructure.md
-[4]: https://docs.aws.amazon.com/cli/latest/reference/iam/list-mfa-devices.html
-[5]: https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use.html
-[6]: https://awscli.amazonaws.com/v2/documentation/api/2.0.33/reference/sts/assume-role.html#options
-[7]: ../quickstart-guide-admin/dynamodb-data.md
-
-
 Your configuration file can be found at `~/.letme/letme-config`. It stores details about your AWS contexts.
 
 ## Concepts
@@ -49,7 +40,7 @@ bravo-dr-account                     eu-west-1
 Your configuration file is under the `letme config` command and subcommands.
 
 :::info
-**See:** [letme config command](../../letme-usage/config.md)
+**See:** [letme config command](../../commands/config.md)
 :::
 
 ## Available configuration

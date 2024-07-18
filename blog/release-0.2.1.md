@@ -72,7 +72,7 @@ manager     eu-west-1
 To fix this situation, we've added support to a new field called tags:
 
 :::info
-**See:** [DynamoDB Data](/quickstart-guide-admin/dynamodb/data) 
+**See:** [DynamoDB Data](/guide/admin/dynamodb/infrastructure) 
 :::
 
 With tags you can define keywords to filter output. This is an example of the previous DynamoDB with tags:

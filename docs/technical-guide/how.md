@@ -48,7 +48,7 @@ letme obtain lockedinspace
 ```
 
 :::info
-**See:** [letme obtain command](../letme-usage/obtain.md)
+**See:** [letme obtain command](../commands/obtain.md)
 :::
 
 2. This will execute a **GetItem** operation based on the **name**, in this case **lockedinspace**.
@@ -94,7 +94,7 @@ letme obtain lockedinspace_chained
 ```
 
 :::info
-**See:** [letme obtain command](../letme-usage/obtain.md)
+**See:** [letme obtain command](../commands/obtain.md)
 :::
 
 2. This will execute a **GetItem** operation based on the **name**, in this case **lockedinspace_chained**.
