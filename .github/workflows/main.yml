@@ -20,11 +20,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Clone the repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v4
         with:
           aws-region: ${{ env.AWS_REGION }}
           role-to-assume: arn:aws:iam::${{ secrets.A5T_ID }}:role/github@letme-documentation
           role-session-name: GitHub_to_AWS_via_FederatedOIDC
-          
+      - name: Install Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: latest
+      - run: npm install
+      - run: npm build
+      - run: ls -la
