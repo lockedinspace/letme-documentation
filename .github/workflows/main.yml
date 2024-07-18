@@ -36,6 +36,6 @@ jobs:
       - name: Upload Content
         run: aws s3 sync build/ s3://www.getletme.com/build
       - name: Get distributionId
-        run: export distributionId=$(aws cloudfront list-distributions | jq -r '.DistributionList.Items[] | select(.Aliases.Items[] == "getletme.com") | .Id')
-      - name: Invalidate cache 
+        run: echo "distributionId=$(aws cloudfront list-distributions | jq -r '.DistributionList.Items[] | select(.Aliases.Items[] == "getletme.com") | .Id')" >> $GITHUB_ENV
+      - name: Invalidate cache
         run: aws cloudfront create-invalidation --distribution-id $distributionId --path "/*"
