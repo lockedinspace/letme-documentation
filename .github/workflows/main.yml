@@ -35,7 +35,7 @@ jobs:
       - run: npm run build
       - name: Upload Content
         run: aws s3 sync build/ s3://www.getletme.com/build
-      - name: Invalidate cache
-        run: |
-          distributionId=$(aws cloudfront list-distributions | jq -r '.DistributionList.Items[] | select(.Aliases.Items[] == "getletme.com") | .Id')
-          aws cloudfront create-invalidation --distribution-id $distributionId --path "/*"
+      - name: Get distributionId
+        run: export distributionId=$(aws cloudfront list-distributions | jq -r '.DistributionList.Items[] | select(.Aliases.Items[] == "getletme.com") | .Id')
+      - name: Invalidate cache 
+        run: aws cloudfront create-invalidation --distribution-id $distributionId --path "/*"
