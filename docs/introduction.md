@@ -5,14 +5,14 @@ slug: /
 
 # Introduction
 
-Let's find out **the What** and **Why** of Letme.
+Let's find out **the What** and **Why** of letme.
 
 ![banner](/img/letme-banner.webp)
 
 
 ## What it is
 
-<p align="center"><b>Letme is a reliable, secure and fast way to switch between AWS accounts from the CLI written in Go.</b></p>
+<p align="center"><b>letme is a reliable, secure and fast way to switch between AWS accounts from the CLI written in Go.</b></p>
 
 :::info
 
