@@ -45,7 +45,6 @@ As current AWS administrators, we've found that **it wasn't easy to manage** cre
 
 :::tip 
 
-Letme is compatible with **Linux**, **MacOS** and **Windows**.
+letme is compatible with **Linux**, **MacOS** and **Windows**.
 
 :::
-
