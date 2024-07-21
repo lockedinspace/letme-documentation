@@ -46,7 +46,7 @@ Here's a CloudFormation template to deploy a simple DynamoDB on your account wit
 ```yaml title="docs/aws/templates/dynamodb.yaml"
 AWSTemplateFormatVersion: "2010-09-09"
 
-Description: Creates a simple DynamoDB Table for Letme.
+Description: Creates a simple DynamoDB Table for letme.
 
 Parameters:
   PartitionKeyName: # DO NOT MODIFY

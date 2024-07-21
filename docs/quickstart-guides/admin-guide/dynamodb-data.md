@@ -9,7 +9,7 @@ Items JSON structure and how to configure Assume Role and multi-account Role Cha
 
 ## JSON Structure
 
-Every JSON file on a DynamoDB is an Item. Letme needs every item to have at least the following fields:
+Every JSON file on a DynamoDB is an Item. letme needs every item to have at least the following fields:
 
 | **Fields**    | **Type**         | **Description**                                             |
 | ------------- | ---------------- | ----------------------------------------------------------- |
